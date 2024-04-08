@@ -1,0 +1,170 @@
+<html lang="en">
+    <head>
+        <title>LilLav</title>
+        <script src="script.js"></script>
+
+        <link rel="stylesheet" href="style.css">
+        <!-- <link rel="stylesheet" href="path/to/fontawesome.min.css"> -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous"/>
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/solid.css" integrity="sha384-Tv5i09RULyHKMwX0E8wJUqSOaXlyu3SQxORObAI08iUwIalMmN5L6AvlPX2LMoSE" crossorigin="anonymous"/>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/fontawesome.css" integrity="sha384-jLKHWM3JRmfMU0A5x5AkjWkw/EYfGUAGagvnfryNV3F9VqM98XiIH7VBGVoxVSc7" crossorigin="anonymous"/>
+
+    </head>
+    <body bgcolor="whitesmoke">
+        <script src="script.js"></script>
+        <section id="header">
+        <a href="#" ><img src="logo.png" class="logo" alt=""></a>
+        <div>
+            <ul id = "navbar">
+                <li><a   href="index.html">Home</a></li>
+                <li><a href="shop.html">Shop</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a  href="contact.html">Contact</a></li>
+                <li><a class="active" href="cart.html"><i class="fa fa-shopping-bag" aria-hidden="true"></i>
+                </a></li>
+                <!-- <li><a href="like.html"><i class="fa-regular fa-heart"></i> -->
+                </a></li>
+            </ul>
+        </div>
+       </section>
+
+
+       <section id="cart" class="section-p1">
+        <table width="100%">
+            <thead>
+                <tr>
+                    <td>Remove</td>
+                    <td>Image</td>
+                    <td>Product</td>
+                    <td>Price</td>
+                    <td>Qunatity</td>
+                    <td>Subtotal</td>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- <tr>
+                    <td><button id="rbtn"><i class="far fa-times-circle "></i></button></td>
+                    <td><img src="https://images-static.nykaa.com/media/catalog/product/5/6/56e65cdMAYBE00000403_1.jpg?tr=w-344,h-344,cm-pad_resize" alt=""></td>
+                    <td>Maybelline New York Superstay Vinyl Ink Liquid Lipstick - Lippy
+                    </td>
+                    <td>Rs.635</td>
+                    <td><input type="number" value="1"></td>
+                    <td>Rs.635</td>
+                </tr> -->
+                <!-- <tr>
+                    <td><button id="rbtn"><i class="far fa-times-circle "></i></button></td>
+                    <td><img src="https://images-static.nykaa.com/media/catalog/product/e/5/e5d4fedNYKAC00000373_1.jpg" alt=""></td>
+                    <td>Nykaa Cosmetics 4 in 1 Quad Eyeshadow Palette - Sunset Stroll
+
+                    </td>
+                    <td>Rs.244</td>
+                    <td><input type="number" value="1"></td>
+                    <td>Rs.244</td>
+                </tr>
+                <tr>
+                    <td><button id="rbtn"><i class="far fa-times-circle "></i></button></td>
+                    <td><img src="https://images-static.nykaa.com/media/catalog/product/3/a/3afd3ed8904330900639_1.jpg" alt=""></td>
+                    <td>Kay Beauty Matte Compact - 130N Medium
+                    </td>
+                    <td>Rs.849</td>
+                    <td><input type="number" value="1"></td>
+                    <td>Rs.849</td>
+                </tr> -->
+            </tbody>
+        </table>
+       </section>
+
+       <section id="cart-add" class="section-p1">
+        <div id="coupon">
+            <h3>Apply coupon</h3>
+            <div>
+                <input type="text" placeholder="Enter Your coupon">
+                <button class="normal" onclick="window.alert('No coupons available')">apply</button>
+            </div>
+        </div>
+
+        <div id="subtotal">
+            <h3>Cart totals</h3>
+            <table>
+                <tr>
+                    <td>Cart Subtotal</td>
+                    <td>Rs.1,728</td>
+                </tr>
+                <tr>
+                    <td>Shipping</td>
+                    <td>Free</td>
+                </tr>
+                <tr>
+                    <td><strong>Total</strong></td>
+                    <td><Strong>Rs.1,728</Strong></td>
+                </tr>
+
+            </table>
+            <button class="normal" onclick="window.confirm('Do you want to proceed?')">Proceed to checkout</button>
+        </div>
+       </section>
+
+     
+
+       <section id="newsletter" class="section-p1 section-m1">
+        <div class="newstext">
+            <h4>Sign Up For Newsletters</h4>
+            <p>Get E-mail updates about our latest shop and <span style="color: goldenrod;">special offers</span></p>
+        </div>
+        <div class="form">
+            <input type="text" placeholder="Your e-mail address">
+            <button class="normal">Sign Up</button>
+        </div>
+     </section>
+     
+     <footer class="section-p1">
+        <div class="col">
+            <img  class="logo" src="logo.png" alt="">
+            <h4>Contact</h4>
+            <p><b style="color: #3b3a3a;">Address: </b> 114 Road, street 09, sydney</b></p>
+            <p><b style="color: #3b3a3a;">Phone: </b>(+91) 89859 71404 </p>
+            <p><b style="color: #3b3a3a;">Hours:</b> 10:00 - 18:00 </b> </p>
+            <div class="follow">
+                <br>
+                <h4>Follow us</h4>
+                <div class="icon">
+                    <i class="fab fa-facebook-f"></i>
+                    <i class="fab fa-twitter"></i>
+                    <i class="fab fa-instagram"></i>
+                    <i class="fab fa-pinterest-p"></i>
+                    <i class="fab fa-youtube"></i>
+
+
+                </div>
+            </div>
+        </div>
+
+        <div class="col">
+            <h4>About</h4>
+            <a href="#">About us </a>
+            <a href="#">Delivery information </a>
+            <a href="#">privacy Policy </a>
+            <a href="#">Terms and conditions </a>
+            <a href="#">Contact us </a>
+
+
+
+        </div>
+        <div class="col">
+            <h4>My Account</h4>
+            <a href="#">Sign in </a>
+            <a href="#">View Cart </a>
+            <a href="#">My wishlist </a>
+            <a href="#">Track my order </a>
+            <a href="#">Help </a>
+
+
+
+        </div>
+        <div class="copyright">
+            <p>@ 2023, gayathri manaswini ch - HTML CSS Ecommerce Template</p>
+        </div>
+     </footer>
+    </body>
+</html>
