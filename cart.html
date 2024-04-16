@@ -1,7 +1,7 @@
-<html lang="en">
+<html>
     <head>
         <title>LilLav</title>
-        <script src="script.js"></script>
+       <!-- <script src="script.js"></script> -->
 
         <link rel="stylesheet" href="style.css">
         <!-- <link rel="stylesheet" href="path/to/fontawesome.min.css"> -->
@@ -12,68 +12,31 @@
 
     </head>
     <body bgcolor="whitesmoke">
-        <script src="script.js"></script>
+       
         <section id="header">
         <a href="#" ><img src="logo.png" class="logo" alt=""></a>
         <div>
             <ul id = "navbar">
-                <li><a   href="index.html">Home</a></li>
+                <li><a   href="./dist/">Home</a></li>
                 <li><a href="shop.html">Shop</a></li>
-                <li><a href="about.html">About</a></li>
+                <!-- <li><a href="about.html">About</a></li> -->
                 <li><a  href="contact.html">Contact</a></li>
                 <li><a class="active" href="cart.html"><i class="fa fa-shopping-bag" aria-hidden="true"></i>
+                    <li id="userDisplay"></li>
                 </a></li>
-                <!-- <li><a href="like.html"><i class="fa-regular fa-heart"></i> -->
-                </a></li>
+                
             </ul>
         </div>
        </section>
 
+       <!-- <section id="product-list"></section>
+<section id="product-list-2"></section>  -->
 
-       <section id="cart" class="section-p1">
-        <table width="100%">
-            <thead>
-                <tr>
-                    <td>Remove</td>
-                    <td>Image</td>
-                    <td>Product</td>
-                    <td>Price</td>
-                    <td>Qunatity</td>
-                    <td>Subtotal</td>
-                </tr>
-            </thead>
-            <tbody>
-                <!-- <tr>
-                    <td><button id="rbtn"><i class="far fa-times-circle "></i></button></td>
-                    <td><img src="https://images-static.nykaa.com/media/catalog/product/5/6/56e65cdMAYBE00000403_1.jpg?tr=w-344,h-344,cm-pad_resize" alt=""></td>
-                    <td>Maybelline New York Superstay Vinyl Ink Liquid Lipstick - Lippy
-                    </td>
-                    <td>Rs.635</td>
-                    <td><input type="number" value="1"></td>
-                    <td>Rs.635</td>
-                </tr> -->
-                <!-- <tr>
-                    <td><button id="rbtn"><i class="far fa-times-circle "></i></button></td>
-                    <td><img src="https://images-static.nykaa.com/media/catalog/product/e/5/e5d4fedNYKAC00000373_1.jpg" alt=""></td>
-                    <td>Nykaa Cosmetics 4 in 1 Quad Eyeshadow Palette - Sunset Stroll
-
-                    </td>
-                    <td>Rs.244</td>
-                    <td><input type="number" value="1"></td>
-                    <td>Rs.244</td>
-                </tr>
-                <tr>
-                    <td><button id="rbtn"><i class="far fa-times-circle "></i></button></td>
-                    <td><img src="https://images-static.nykaa.com/media/catalog/product/3/a/3afd3ed8904330900639_1.jpg" alt=""></td>
-                    <td>Kay Beauty Matte Compact - 130N Medium
-                    </td>
-                    <td>Rs.849</td>
-                    <td><input type="number" value="1"></td>
-                    <td>Rs.849</td>
-                </tr> -->
-            </tbody>
-        </table>
-       </section>
+        <section id="cart"  class="section-p1">
+        
+       </section> 
+       
+    
 
        <section id="cart-add" class="section-p1">
         <div id="coupon">
@@ -89,7 +52,7 @@
             <table>
                 <tr>
                     <td>Cart Subtotal</td>
-                    <td>Rs.1,728</td>
+                    <td id="subtotalprice"></td>
                 </tr>
                 <tr>
                     <td>Shipping</td>
@@ -97,7 +60,7 @@
                 </tr>
                 <tr>
                     <td><strong>Total</strong></td>
-                    <td><Strong>Rs.1,728</Strong></td>
+                    <td id="totalprice"><Strong></Strong></td>
                 </tr>
 
             </table>
@@ -166,5 +129,8 @@
             <p>@ 2023, gayathri manaswini ch - HTML CSS Ecommerce Template</p>
         </div>
      </footer>
+     <script type="module" src="/src/script.js"></script>
+     <script src="./dist/bundle.js"></script>
     </body>
+    
 </html>

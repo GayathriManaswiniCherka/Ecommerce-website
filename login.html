@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="style.css">
+        <!-- <link rel="stylesheet" href="path/to/fontawesome.min.css"> -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous"/>
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/solid.css" integrity="sha384-Tv5i09RULyHKMwX0E8wJUqSOaXlyu3SQxORObAI08iUwIalMmN5L6AvlPX2LMoSE" crossorigin="anonymous"/>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/fontawesome.css" integrity="sha384-jLKHWM3JRmfMU0A5x5AkjWkw/EYfGUAGagvnfryNV3F9VqM98XiIH7VBGVoxVSc7" crossorigin="anonymous"/>
+</head>
+<body bgcolor="#c9ced6">
+    <!-- <script src="script.js"></script> -->
+       <section id="header">
+        <a href="#" ><img src="logo.png" class="logo" alt=""></a>
+        <div>
+            <ul id = "navbar">
+                <li><a  class="active" href="/dist/index.html">Home</a></li>
+                <li><a href="shop.html">Shop</a></li>
+                <!-- <li><a href="about.html">About</a></li> -->
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="cart.html"><i class="fa fa-shopping-bag" aria-hidden="true"></i>
+                </a></li>
+                <li><a href="login.html">Login/sign-up</a>
+                <!-- <li><a href="like.html"><i class="fa-regular fa-heart"></i> -->
+                <!--</a></li>-->
+            </ul>
+        </div>
+        <div id="mobile">
+            <i id="bar" class="fas fa-outdent"></i>
+            <!-- <a href="cart.html"><i class="fa fa-shopping-bag" aria-hidden="true"> -->
+
+        </div>
+       </section>
+       <section id="login-container">
+        <div id="login-page">
+            <form id="login-form" action="/dist/index.html  ">
+                <h4>Login</h4>
+                <div class="input-group">
+                    <input type="email" id="email2" placeholder="Enter your email">
+                </div>
+                <div class="input-group">
+                    <input type="password" id="pwd2" placeholder="Enter your password">
+                </div>
+                <div class="input-group">
+                    <button class="normal">Login</button>
+                    
+                </div>
+            </form>
+            <button  id="logout" style="background-color: grey;">Logout</button>
+        </div>
+    </section>
+
+    <script type="module">
+        import {initializeApp} from "https://www.gstatic.com/firebasejs/10.10.0/firebase-app.js";
+            import{ getAuth , createUserWithEmailAndPassword, signOut, signInWithEmailAndPassword} from "https://www.gstatic.com/firebasejs/10.10.0/firebase-auth.js";
+        const firebaseConfig = {
+         apiKey: "AIzaSyAg_GTiI3DqOwCzWF64prIMH7_vUfbezS8",
+         authDomain: "lillav-20ed2.firebaseapp.com",
+         projectId: "lillav-20ed2",
+         storageBucket: "lillav-20ed2.appspot.com",
+         messagingSenderId: "1026670511176",
+         appId: "1:1026670511176:web:c588be948413a5197f047d"
+       };
+  initializeApp(firebaseConfig);
+
+  const auth = getAuth();
+
+  const logoutBtn = document.querySelector('#logout');
+  logoutBtn.addEventListener('click',()=>{
+    signOut(auth).then( ()=>{
+      alert("User signed out");
+    }).catch((err)=>{
+      alert("Failed to sign out");
+    })
+  })
+  const loginForm = document.querySelector('#login-form');
+  loginForm.addEventListener('submit',(e)=>{
+    e.preventDefault();
+    const email2 = document.querySelector('#email2').value;
+    const pwd2 = document.querySelector('#pwd2').value;
+    signInWithEmailAndPassword(auth, email2, pwd2)
+                .then((cred) => {
+                    alert('welcome to Lillav ' + email2);
+                    document.querySelector('#email2').value = ''; // Clear email field
+                    document.querySelector('#pwd2').value = ''; // Clear password field
+                    window.location.href = "./dist/index.html";
+                })
+                .catch((err) => {
+                    alert('User not found');
+                });
+        });
+    </script>
+    <script src="./dist/bundle.js"></script>
+</body>
+</html>

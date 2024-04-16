@@ -1,0 +1,84 @@
+
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add products</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+<body>
+    <div style="width: 800px;">
+      <form id="addProducts-form">
+        <div class="form-group">
+          <label for="id">Product id</label>
+          <input type="text" class="form-control" id="id" placeholder="Enter product tile"
+          >
+          
+        </div>
+        <div class="form-group">
+            <label for="title">Product title</label>
+            <input type="text" class="form-control" id="title" placeholder="Enter product tile"
+            >
+            
+          </div>
+          <div class="form-group">
+            <label for="description">Product description</label>
+            <input type="text" class="form-control" id="description" placeholder="Product description">
+          </div>
+          <div class="form-group">
+            <label for="price">Product price</label>
+            <input type="text" class="form-control" id="price" placeholder="Product price">
+          </div>
+          <div class="form-group">
+            <label for="url">Product url</label>
+            <input type="url" class="form-control" id="url" placeholder="Product url">
+          </div>
+          <button type="submit" class="btn btn-primary">Add</button>
+    </form>
+    </div>
+    <script type="module" >
+      import { initializeApp } from "https://www.gstatic.com/firebasejs/10.10.0/firebase-app.js";
+    import { getFirestore, collection, addDoc,setDoc,doc } from "https://www.gstatic.com/firebasejs/10.10.0/firebase-firestore.js";
+    const firebaseConfig = {
+        apiKey: "AIzaSyAg_GTiI3DqOwCzWF64prIMH7_vUfbezS8",
+        authDomain: "lillav-20ed2.firebaseapp.com",
+        projectId: "lillav-20ed2",
+        storageBucket: "lillav-20ed2.appspot.com",
+        messagingSenderId: "1026670511176",
+        appId: "1:1026670511176:web:c588be948413a5197f047d"
+    };
+  initializeApp(firebaseConfig);
+
+  const app = initializeApp(firebaseConfig);
+    const db = getFirestore(app);
+
+    const addProdForm = document.querySelector('#addProducts-form');
+    addProdForm.addEventListener('submit', async (e) => {
+        e.preventDefault();
+        const id = document.querySelector('#id').value;
+        const title = document.querySelector('#title').value;
+        const description = document.querySelector('#description').value;
+        const price = document.querySelector('#price').value;
+        const url = document.querySelector('#url').value;
+
+        try {
+                await setDoc(doc(db, 'products', id), {
+                    id: id,
+                    title: title,
+                    description: description,
+                    price: price,
+                    url: url
+                });
+                console.log('Product added successfully');
+                alert('Product added successfully');
+                addProdForm.reset();
+            }  catch (err) {
+            console.error('Error adding product: ', err);
+            alert('Error adding product: ' + err.message);
+        }
+    });
+
+    </script>
+    
+</body>
+</html>

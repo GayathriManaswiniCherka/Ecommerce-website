@@ -1,7 +1,7 @@
 <html lang="en">
     <head>
         <title>LilLav</title>
-        <script src="script.js"></script>
+        <!-- <script src="script.js"></script> -->
 
         <link rel="stylesheet" href="style.css">
         <!-- <link rel="stylesheet" href="path/to/fontawesome.min.css"> -->
@@ -12,21 +12,22 @@
 
     </head>
     <body bgcolor="#c9ced6">
-       <section id="header">
-        <a href="#" ><img src="logo.png" class="logo" alt=""></a>
-        <div>
-            <ul id = "navbar">
-                <li><a   href="index.html">Home</a></li>
-                <li><a class="active" href="shop.html">Shop</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="contact.html">Contact</a></li>
-                <li><a href="cart.html"><i class="fa fa-shopping-bag" aria-hidden="true"></i>
-                </a></li>
-                <!-- <li><a href="like.html"><i class="fa-regular fa-heart"></i> -->
-                </a></li>
-            </ul>
-        </div>
-       </section>
+        <section id="header">
+            <a href="#" ><img src="logo.png" class="logo" alt=""></a>
+            <div>
+                <ul id = "navbar">
+                    <li><a   href="./dist/index.html">Home</a></li>
+                    <li><a class="active" href="shop.html">Shop</a></li>
+                    <!-- <li><a href="about.html">About</a></li> -->
+                    <li><a  href="contact.html">Contact</a></li>
+                    <li><a  href="cart.html"><i class="fa fa-shopping-bag" aria-hidden="true"></i>
+                        <li id="userDisplay"></li>
+                    </a></li>
+                    
+                </ul>
+            </div>
+           </section>
+       
        
        <section id="shop-main">
             <div>
@@ -41,315 +42,11 @@
        <section id="prod1" class="section-p1" class="section-m1">
         <h2 style="color: #4f1c61;">SHOP NOW!!</h2>
         <p>Bestsellers</p>
-        <div class="container">
-            <div class="pro">
-                <img src="https://images-eu.ssl-images-amazon.com/images/I/511Fp8gCPrL._AC_UL210_SR210,210_.jpg" alt="">
-                <div class="des" onclick="window.location.href ='sPRODUCT.html';">
-                    <span> Matrix </span>
-                    <h5>Matrix Opti.Care Professional Shampoo for Frizzy Hair with Shea Butter, Upto 4 Days Frizz Control</h5>
-                    <div class="star">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                    </div>
-                    <h4>Rs.610</h4>
-                </div>
-                <a href="#"><i class="fa-sharp fa-solid fa-bag-shopping"></i></a>
-            </div>
-
-            <!-- ============== -->
-            <div class="pro">
-                <img src="https://www.lakmeindia.com/cdn/shop/files/24451_H-8901030742439copy_600x600_crop_center.jpg?v=1688540192" alt="">
-                <div class="des">
-                    <span> Lakme </span>
-                    <h5>Lakme 9 To 5 Primer + Matte Perfect Cover Foundation </h5>
-                    <div class="star">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-
-                    </div>
-                    <h4>Rs.446</h4>
-                </div>
-                <a href="#"><i class="fa-sharp fa-solid fa-bag-shopping"></i></a>
-            </div>
-            <!-- =================== -->
-            <div class="pro">
-                <img src="data:image/jpeg;base64,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" alt="">
-                <div class="des">
-                    <span> Milani </span>
-                    <h5>Milani All-inclusive Eye, Cheek & Face Palette-light To Medium
-                        (10.92gm)
-                        </h5>
-                    <div class="star">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                    </div>
-                    <h4>Rs.2205</h4>
-                </div>
-                <a href="#"><i class="fa-sharp fa-solid fa-bag-shopping"></i></a>
-            </div>
-            <!-- ================================= -->
-            <div class="pro">
-                <img src="https://m.media-amazon.com/images/I/71oehMQkl4L.jpg" alt="">
-                <div class="des">
-                    <span> Garnier </span>
-                    <h5>Garnier Micellar Cleansing Water For Sensitive Skin
-                        (125ml)
-                        </h5>
-                    <div class="star">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-
-                    </div>
-                    <h4>Rs.200</h4>
-                </div>
-                <a href="#"><i class="fa-sharp fa-solid fa-bag-shopping"></i></a>
-            </div>
-            <!-- ========================= -->
-            <div class="pro">
-                <img src="https://www.sephora.com/productimages/sku/s2126985-main-zoom.jpg?imwidth=315" alt="">
-                <div class="des">
-                    <span> kerastase</span>
-                    <h5>Elixir Ultime L'Huile Originale Serum
-
-                        </h5>
-                    <div class="star">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-
-                    </div>
-                    <h4>Rs.3100</h4>
-                </div>
-                <a href="#"><i class="fa-sharp fa-solid fa-bag-shopping"></i></a>
-            </div>
-            <!-- ================================== -->
-            <div class="pro">
-                <img src="https://ik.imagekit.io/hng/pdp/535251_1.jpg?v=1" alt="">
-                <div class="des">
-                    <span> NIVEA </span>
-                    <h5>NIVEA 50x Vitamin C BODY LOTION with SPF 15 for Cell repair and Natural glow
-                        (400ml)
-                        
-                        </h5>
-                    <div class="star">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                    </div>
-                    <h4>Rs.440</h4>
-                </div>
-                <a href="#"><i class="fa-sharp fa-solid fa-bag-shopping"></i></a>
-            </div>
-
-            <div class="pro">
-                <img src="https://images-static.nykaa.com/media/catalog/product/b/e/beige-focus.jpg" alt="">
-                <div class="des">
-                    <span> Kay Beauty </span>
-                    <h5>Kay Beauty Contour Stick - Beige Focus
-                        (2.8g)
-                        </h5>
-                    <div class="star">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <!-- <i class="fas fa-star"></i> -->
-
-                    </div>
-                    <h4>Rs.725</h4>
-                </div>
-                <a href="#"><i class="fa-sharp fa-solid fa-bag-shopping"></i></a>
-            </div>
-
-            <div class="pro">
-                <img src="https://m.media-amazon.com/images/I/81V9aPkPTgL._AC_UF1000,1000_QL80_.jpg" alt="">
-                <div class="des">
-                    <span>Swiss Beauty </span>
-                    <h5>Swiss Beauty Professional Face & Eye Brush Set - 1
-                        (6 pcs)
-                        </h5>
-                    <div class="star">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                    </div>
-                    <h4>Rs.974</h4>
-                </div>
-                <a href="#"><i class="fa-sharp fa-solid fa-bag-shopping"></i></a>
-            </div>
-
-            
-       
-            <div class="pro">
-                <img src="https://bluemercury.com/cdn/shop/files/variant_images-size-100ml-690251033713-1.jpg?v=1694463175&width=2048" alt="">
-                <div class="des">
-                    <span> Jo Malone</span>
-                    <h5>Jo Malone London Wood Sage & Sea Salt Cologne
-                        (100ml)</h5>
-                    <div class="star">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-
-                    </div>
-                    <h4>Rs.11800</h4>
-                </div>
-                <a href="#"><i class="fa-sharp fa-solid fa-bag-shopping"></i></a>
-            </div>
-
-            <!-- ============== -->
-            <div class="pro">
-                <img src="https://images-static.nykaa.com/media/catalog/product/4/b/4b312a8602004106681_7.jpg" alt="">
-               <div class="des">
-                    <span> Benefit </span>
-                    <h5>Benefit Cosmetics Benetint
-                        (6ml)
-                        
-                        </h5>
-                    <div class="star">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-
-                    </div>
-                    <h4>Rs.1950</h4>
-                </div>
-                <a href="#"><i class="fa-sharp fa-solid fa-bag-shopping"></i></a>
-            </div>
-            <!-- =================== -->
-            <div class="pro">
-                <img src="https://media6.ppl-media.com/tr:h-250,w-250,c-at_max,dpr-2/static/img/product/298063/m-a-c-studio-fix-powder-plus-foundation-nc35-15-g_2_display_1597733105_c3d1457d.jpg" alt="">
-                <div class="des">
-                    <span> M.A.C</span>
-                    <h5>M.A.C Studio Fix Powder Plus Foundation - NC42
-                        (15gm)
-                        </h5>
-                    <div class="star">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                    </div>
-                    <h4>Rs.3300</h4>
-                </div>
-                <a href="#"><i class="fa-sharp fa-solid fa-bag-shopping"></i></a>
-            </div>
-            <!-- ================================= -->
-            <div class="pro">
-                <img src="https://images-static.nykaa.com/media/catalog/product/tr:h-800,w-800,cm-pad_resize/c/4/c4da1f6KAYBE00000054_01.jpg" alt="">
-                <div class="des">
-                    <span>Kay</span>
-                    <h5>Kay Beauty Creme Blush - Sweetheart Pink
-                        (10 ml)</h5>
-                    <div class="star">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-
-                    </div>
-                    <h4>Rs.660</h4>
-                </div>
-                <a href="#"><i class="fa-sharp fa-solid fa-bag-shopping"></i></a>
-            </div>
-            <!-- ========================= -->
-            <div class="pro">
-                <img src="https://delhidutyfree.co.in/media/catalog/product/cache/d58eb6b6cd0b875591a577c8f7a3618e/1/3/1304011.jpg" alt="">
-                <div class="des">
-                    <span> Clinique</span>
-                    <h5>Clinique Moisture Surge 100h Auto-replenishing Hydrator (Moisturizer)
-                        (30ml)
-                        </h5>
-                    <div class="star">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-
-                    </div>
-                    <h4>Rs.1950</h4>
-                </div>
-                <a href="#"><i class="fa-sharp fa-solid fa-bag-shopping"></i></a>
-            </div>
-            <!-- ================================== -->
-            <div class="pro">
-                <img src="https://bellavitaorganic.com/cdn/shop/files/ManPerfumeGiftSet_1_2c559e89-14fa-48c9-b597-112fcc904fe2_765x.jpg?v=1693932528" alt="">
-                <div class="des">
-                    <span>Bella vita</span>
-                    <h5>Luxury Perfume Gift Set For Man - 4 X 20mls
-                        </h5>
-                    <div class="star">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-
-                    </div>
-                    <h4>Rs.849</h4>
-                </div>
-                <a href="#"><i class="fa-sharp fa-solid fa-bag-shopping"></i></a>
-            </div>
-
-            <div class="pro">
-                <img src="https://www.konvy.com/static/team/2022/0929/16644486901648_600x600.jpg" alt="">
-                <div class="des">
-                    <span>Estee Lauder</span>
-                    <h5>Estee Lauder Perfectionist Pro Multi-Defense Sunscreen SPF 50
-                        (30ml)
-                        </h5>
-                    <div class="star">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-
-                    </div>
-                    <h4>Rs.3800</h4>
-                </div>
-                <a href="#"><i class="fa-sharp fa-solid fa-bag-shopping"></i></a>
-            </div>
-
-            <div class="pro">
-                <img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAoHCBIVFRYWFRUYGRgYHRkcGBgaGBgZHRgaGhkaGhgYGRofIy4lHB4rHxwZJjgoKy8xNTU1GiQ7QDszPy40NTEBDAwMEA8QHxISHzQsJCw0PTQ2NDE0NDY4NzY0Pzc0NDY0MTY2MTQ0PzY0NDQ0NDQ0NTQ3NTQ0NDQ2NDQxNDQ0P//AABEIAOEA4QMBIgACEQEDEQH/xAAcAAEAAgMBAQEAAAAAAAAAAAAABgcBBAUDAgj/xABHEAACAQIDAwkEBQkHBAMAAAABAgADEQQSIQUGMQcTIjJBUWFxsTRyc7IUM4GRoSMkQmKTs8LR8BUWUlSCosFDY3SSJVPS/8QAGQEBAAMBAQAAAAAAAAAAAAAAAAIDBAEF/8QAKBEBAAICAAYCAgEFAAAAAAAAAAECAxEEEiExMkEz8CJRcUJhgaHh/9oADAMBAAIRAxEAPwC5oiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiBWHLD1sH5V/WhK4lj8sPWwflX9aEriZMnlL0uH+OPvsiIkFxMGZmDAlcREmoXZERNbziIiAiIgIiICIiAiIgIiYgJmc/Z+1cPXzczVR8ps2Ug2Ov8j9034OzMREBERAREQKw5Yetg/Kv60JXEsflh62D8q/rQlcTJk8pelw/xx99p5ufgOcoL/8AGJX1b8u9VEB6R0sQW04aA8JI32bsymt6+FoKw4rSFTEG/d0UB/CRzdPaqU8MqnaP0cgv+T5lHy3cniVJN+P2ztLt+mTYbYuTwH0enc/ZklteXUf8Z8nNNp/6gG9D0DiGNCm1OnZbIyFDe2pynUAzjmd3fFy2JYmq1W6r02TmyejwyWGg77ThGU27y14/GEriInUF2RETW80iIgIiICedWqqi7EAd5NhPSQrlXcrs9ypIbnKViDYi7gaHyJgb+P352bRvzmIAsbGyVG17rhZ5YLlB2XWYLTxBLHgObqi/+2fn7E7TxAFzVZvAkn1vPXZWPqO1i7D3Tb0gfqGhXV1DIwYHtH9aT2kJ5K8TmwIUtdkeoGubsLtmGb7Dx8JNoGJGeUHaRoYGsykhnApoRxu5ykg9hC5jfwkmla8ste1PCIDq1Utb3QFB/wB/4zk9kqRu0Q4vJ3iOYxFJb2WouUj9Y6rp52lySgcBjSmJRV4qhde2zDUfLL6pVAygjgQCPIi4kaSu4ivWJesREmzkREBERArDlh62D8q/rQlcSx+WHrYPyr+tCVxMmTyl6XD/ABx99ptulidjrRC4kJz92u1Sm7pbMcmnV4W7pNtiY2lntSxGBNPKbLRUI4OmW4zkW46WkM2ftDALsyimKU1CKznmqbqtRSTVszLmU5bEj/UJpfTdgnT6Fij225y+nf8AXSys6iOym1OaZ793M3rTFDEMMWyNVyrdk6traZdB2eE4pm7tarhmqE4ZGSlZcqO2ZgbdLXM2l/GaRlNu7VTxhK4iJJWuyIia3mkRMQMxPOnUVgCrBgeBBBB8iJ6QEr3lkB+gqQrm1RNVayre46a3Ga/AaGxlhSot/MXjMYGw9IAhahzJdVDBT0SGPEggHWBT2IBtwb7Tp6zb2OvS4Tb2pu9jaYAegy3OnSRr28VYzf2BuzjWYBaN/Euij8Tf8IFtckRJwtQ5rjnWsMtiOil7t+l2eUn8rzc7Yu0cFTqGo6CncMtMNn781+jxPR4HslhwMSseWfBsUw9YDSmzqT3F8pX5D+Es6cveLBpWw1amwuHUqPBjorDuIaxv4TkpUtyztQYLGulZBdMgudNCFIIPjf1n6F2WhWjSB4hEB8woBlfbB5PKVOqjPWZ1U3y5coYjWx1OlxwlmSNYmFua8W1EMxESagiIgIiIFYcsPWwflX9aEriWPyw9bB+Vf1oSuJkyeUvS4f44++0+3N2rh0wjUufp4asXJd3UNziEWAUkgXA046WJtrNvZm8OEoumGwlWnQoIuZ69RCxrOCoKi5XUgscx7tAABeK7D3Xq4mm1Y1KdGkGsHqNYM3aF8PG/Hv1nxt/dqphUWpnp1aTkqtSm1xmFzlP3Nwv1TwkotaIidITTHNpjfWXlvXjKFbF1qlEWRiLG1gxCgMwHZdrnx49s45mZgyuZ31aKxqNJXERJKl2RETW81z9r7RTD0nqvwUXsOJJ0VR4k2Eq/aW9+MxAeh0UFS4UKpvw0p5if0uF/QGWTvHhcPUoOK5AQdLNe2UjgQe+/Z23lOYBAGFd75KOVyoIDE36Fr9ha1z2AGUZrTExHpt4alJrNpjrDv7sbztgKC06tElSzkG+Vrsbmyns+6TbZm+uBraCpkb/DUGT/AHdX8ZSGOqc47Ob9Mknpd5Jt5DQfZPhFAkK5LRCdsFbTt+g/7ewfD6TQ/ap/OQXD0X+k1GynKzsVYC4ILEggjThK6HmZcO7x6Ce6voJbjvNt7Zs2GKRExKM75dWl7zegmzuw6grcgeZAmeV0dDCe9U+VZX5UZeEnNtTpyuHmrzbX5jqimkyhhdlsBfjfhOlIrhvqqXuJ8gkqklJNbHjoN9nqJszXxvUb+u0QNHA9cf12TrTkYPrDznXgIiICIiAiIgVhyw9bB+Vf1oSuJY/LD1sH5V/WhK4mTJ5S9Lh/jj77WRugMQ+DRFo4OpTDOVFeo4bNna5yc2wHE2N+Bnc5nF5Ob+jbNyA5gvOvlB78vM2v4yutk7u4evTFR8dh6LEsMlQrmFiQCbuOPHhN+nuhgwyk7TwZAIJF01sb268nW06jp/tVeleaev8ApzN8KTLimDJRQ5U6NAkoNOIJVde/ScMyQb7thzi2NA0zTypY0suW+XW2XS95HzK7d5aMfhCVxETqC7IiJrea4e+AU4OuGIAK2ueF7jL+NpS61wBUUjrJl7rMLFdO64HjpLz23TptQqip1MpzaE2tqDYdxsZRWOo2pK4uDndHB4EgB1Yd3Ra1v1Znzd4buEn8Zj+7mifRnlR4Gfd5U0Q+iZce7Z6FP3E+USmry491/qqXuJ8gluHvLLxXaHG5XephfeqfKsgB6olg8rg/J4X33+VZXp6snbyMPxyuPDfU0vhp8gnN2RykYdxaurUm01F3U+NwLj7vtnTw31FL4dP5BKVQaCcyXmutIYMVb75n6LwmKp1VD03V1PBlIIP2iZxnUbylCbJ2viMMxajVZe9Rqre8h0PrLG3f36TEDmayZKrCylblHPd3qfA6eM7XLFukuZOHtTrHWEmwfWHnOvOPg+sPMTsS1nIiICIiAiIgVhyw9bB+Vf1oSuJY/LD1sH5V/WhK4mTJ5S9Lh/jj77dKrsd1wqYssuR3NMLc5gwz6nS1uge3umrisDVpLTd1KrVXNTJI6SkA5hY8LMOPfJ9uVUxDYQK1PC8wrvlbEE9JiSxyra2lyL+fjJBUdmyqf7ObKMqAsTlGgCqLaDhoJKKRMbVzmmtpjXtTEGdnevnBinWpSSky5QVp9TqghhoLggg8JxjK5jUtNZ3G0riIk1S7IiJqea5W8lLNha6jtpv2X4KTa0pjbbBaKpoc9R3JAsAURaZAH4y+jKn302CabVWv+TIapTXgA5sHHnYDS/d4yjNX21cNaOtVfCemWZC917eP4z0VBKNtsVeWWXBuofyNH3E+QSp1EtjdT6qj7lP5RLsE9ZZuLjVYczlbH5LDe+/yCV456MsrlPw+dcGl7ZqrC9r2GTU27bC+nbIRVwNJaZcM7gq2Wm1PK4YXDPUAZlVFHSBDHNwsLEido/JDFaIxzCzsJ7PR+HT/AHaymF4S58F7PR+FT+RZSiHSQzekuF/q/wAPW06e7ZtiqHvr6zmAzpbu+1UPiJ6ymvlDVfxn+FtY/GmhSqVVUMUUuFOgNuy/ZPTd/evD4sAKclTtpsQD45TwYeWveBNDeT2PE/Df0lRU6hGvaDcd48jNF7zWWLDhi9Z/b9GxKv3Y3+ZLU8VdlHCoBdgP1x+kPEa6dssjB4ynVQPTdWVuDA3Bk63i3ZTkxWpPVsxESasiIgVhyw9bB+Vf1oSuJY/LD1sH5V/WhK4mTJ5S9Lh/jj77T/clMQ+GZXoYarhw5K/SGygP+ll6LgjU6kDUtqeAkCbMQEFcDszMCCtqmt+y35DjeRzcpcRWw7UmwlHEUEfMprvkCuR0gvQfN1ieAtmOuth3aWxSH02Pgly2Kvz65SeIy2o5ri3aBLq+MM9/KVe71VMS2LrHEKFqXAKrqoUKMmQ9q5bG/ib2Ok45nd3z+kfS6hr5M5CmyMWVVyjKoJAJ0GunEmcIyi3eWvH4wlcRE6guyIia3msGUvvhtWpWxNQN0RTYoqjhZWNs1+N7k/dLolf78bo1K78/h1BcizrcAsRazLfS9tCL9glWWJmvRo4a1a3/ACVjXTKdODAMLG9ri9j5cJ5q8keK3c2lUXpYdgqDgMo8yFvdif1byOnD5cwJyleKsDe/+HvB8+6Zpj9t8Wie0sgy2d0vqaPuJ8olQgy3Nz/qKPuJ6CXYPKWbi5/GP5afKnUKphGV8hFVrP0uh0Ot0QW08NZGsbXdcO5SriMQGDIztWcoqstsxpo5IuGIHOHs6slPKeEyYPPbJz3SuSBbIesRqFva5GtryGNiHyOHw9JAqOtR0pqjAspyKHXQEnKAq6OLkhhcy23dVj8Fk4H2eh8Kn8iymAgtLl2f7NQ+FT/drKeAtKs3pZwsd/8ADynS3eP5zh/iJ8wmlabuwx+c4f4ifOJTXvDVePxlaW8I/NMT8N/lMp60uHb/ALLifhVPkMp9Zbm7wz8J2n+QTq7F23XwrZqTWP6SG5Vx+svf4ix/Gcu0SjemqYiY1K6d2d66WL6BGSqBcoTcEdpVu3xHEeWskk/PFCsysGUlWUgqQSCCOBB7DLI3V37V7UsUQraAVdArd2ccEPjwPhNNM2+ksObhuX8q9lgxPkG8+peyKw5Yetg/Kv60JXEsflh62D8q/rQlcTJk8pelw/xx99rD3OLYjBjDtghXpo7MXaoEUsSWAAtckBptbxY6lh6VKhiNmDmVJNMCqGQNqSBpobMdD3m04Gx95sImEXDV8O9TKzMcrZQSWJHAgmwPbN6rvds5qK0GwVQ0lOZVNS9m11BzX/SPb2yyLRy62ptS3NvU6399ohtbEUalQtQoiilgAgNwCBqb+M0TN/bFeg9UtQpGkhC2QnNYgam9zxM0DKZ7tVeyVxESapdkRE1POIiIGJG9490sPizma6VALZ1tcjsDA6H1kkicmImNS7FpidwqrG8mddbmlVRx2BgUP4ZgfvEkW7eFekiU3FnRQrC4NiPEcZM5H/8Arv70jWkVncJ3y2tGrODyk4cVFwang1exsQptkckBjotwLXOg4yI47AkUS60rMEcZDiKbpRUBs7JZyzsUJsvBSWOpICy3lMpo1PBh7ZTiADc5Qbo9gzfoqTYE9gJOkhlUYlkdcRRCU0RyScOlIU2CnJkcIpBz5VC3Oa9tb3i3dbj8Vi7O9mw/wqXyLKnZAZa2yz+bYf4NL92sqk0z2HSU5/S7gvbwKTb2M1sTQP8A3Kf4uon1QwtR1JVCQvWIF7XntsygRXofEpn/AHrKKz1a7xus6WXtsfmuI+FU+Qyn7S49q+zV/h1PkMpyX5u8MnCdpCZ9T5ImJQ2MzIaYt3TF4E53M3yNHLRrm9Hgrk60u4HvT5fLhagN5+dabSzNzd8qZVKFYBCoCI9+i1rAKb9U/h5S/Fk1+MsXEYP6qx/LR5Yetg/Kv60JXEsflh62D8q/rQlcSOTylZw/xx99pju3uzRq4Q4h1rVWZmRadHLdCBozXI7fHQETewO6OEpZKWJ52riXUM1Ggb80twudrW0BIGYnXsGhMzuVgGXCPXQ4iozsyc1h3VcpA0ZgzKCeGt+DLpNzZex6eHqKKz4ivjaq3qChUIKISoLMxZSVBy6k3NtBYSytY1HRTe87mNoRvNstcLialFWzKuUgm2YBlDZWtpcX9D2zkmdnezZ60MXWph2cAg5mOZ7uoch27W14+U4xlNu8tNJ3WJSuIiSQXZERNbzSIiAiIgJH29ofz/4EkE4D+0P5j5RAjvKminD4fOxVefAZguYqDSq6hdM3DhceYkTxezjSoMztiCgR1VHw2VAzIVphr1G5s5ytiV4gSYcpdUJRwjkEhcTTPRF2H5OrZlHawOoHeBIAMIKKu5rI5yVFKIKuds6lOmrKuRQWBbMb6aXNpC3dpx+Ky9kn81w3waX7tZ77xbn0cQTUQ83V/wAQHRY/rr2+Y185r7I9lw3waX7tZMZ21YtGpURa1bbrLg7G3ep0aC0yLtY3fS4Y8cp4gA8JC9sbvVcPXpOAXpl6ZL9obnAekBw7NeB85aU1sXUUK1yB0ToSO6RnFWYiP0spnvWZnvtwMTTz06i/4kZfvUiVfjtjVqVyyHKP0hqP60lpUWHabDtPd3mdNMDQa4BVlP6Nw1j4HiO375zJj5ksOeMcTEwocifJEs/eHchXu1HRjYDhbt4gCwHAfjI3hdysS7MoWwW/SYjjp0dOJHeDY/fM80tE603VzY5je0UUEH0M6GE2VVq3ZFOo1AFrjtI8Pst9ssnZu41OmozNd9Lm1xftIvxHn+ElOHwFJAMqKLcCALjsNj2SdcNp79FV+KrHj1Ulsrd7E13YInUNiWOUE9gF/wDm0luG5OWKgtUyk2uvbY9YXsQD9/d4yygszLIw19s9uKvPboqTlJwfMpgaWYtlWuAzG5sDR7+zw7OEgssflg62D8sR60JXEqvGraasE7pEz/dM928ThqGGFWomNUuXzVKDMtNsrEC5DAAgaagHjPfB7S2Vzhaku0DVcEFkdy7g2vcq+ZuA+4TO5m8OFw9FVq4murXYtSCK9OxY2tdCRcamzDUmd074bLVWWjUehmJLNSw4UkniTmQi/jaTrrUdYUXi3NPSVe7z4ZErsESqilVbLWN3uwuWY5ibk66m85BnV3kxNOpXZqVWpVUhenV6xNtRwFgOwWnKMqt3aqb5Y2lcREkrXZERNbzSIiAiIgJwH9ofzHyid+cKr7Q/+n5FgcHlLrinQwrkEhMTTJy2zAc3V1W+mYcR4gSuRQp0kZ+fpv0KioiCpmYujUwXDqoRQGubknSwve8n3K17FR/8hf3VaVY56Ert3asMbpK49jeyYb4NH92smUhmxfZMN8Cj+7WTOWQzT3R3eys4FNVYqGLZrG17ZbepnAfZ9VVz84GC9Iggg2GpHbrO7vdxo+b/AME1sT9S/uN6GHHOpYznFKrcEgi58fKbOz91qjWZ64A7lQk/eT/xOXsnjJ9s7qCBjZ1LKrLmZgpsCxubWB4/bNya+F4v738KzZgIiICIiBWHLD1sH5Yj1oSuJaPKnszEV2wvM0nfKK2bIpOW5pZb24XsfuMgf928f/la37Nv5TLkieaXoYLVjHG5+7cqJ1f7t4//ACtb9m38o/u3j/8AK1v2bfykOWf0u56/typgzrf3bx/+Vrfs2/lMHdvH/wCVrfs2/lHLP6Oev7daJvf2Niv/AKKv/o0SzUqeaq3oiJpeeREQEREBOFX9ob/T8qzuzh1/aH/0/KIEZ5WvYqX/AJCfu6sqpz0Ja3Kz7FTP/fT5KkqcuCtgRfzldu7Vhn8JXLsT2PC/Ao/u1kzkN2MtsJhgRYihRuO78msmUnDNPdHN7f8Ao+bfwzVxP1L+43oZub2jSl7x9BNPE/Uv7jehnXHD2Txk+2d1BIDsnjJ9s7qCB94Xi/vfwrNma2F4v738KzZgIiICIiBUnLh18D5Yn1w8q6Wjy4dfA+WJ9cPKuh1gnx/GAfGTvkyUn6TYXu1BX0v+TIr5w3cpst/ITvmpVSrggjMic4qgqoUHCpg8PWqIptrTLq1yO0nWBU0T7xFc1HdyLF2ZyO4uxY+s+ICIiB+rIiIcIifJEAWE82rgQyTxfDEwPpsWonIaurYg6i5AIF9SAACQO2bz4AmaWN3fp1chcXKNmQ9qN3g/1ftgb2PZBTu5UKCLliAOB75x8JjsLU1pvTY9y2LD/TbMOB7OyblTZmIIKiqpB7HQt4cAwH4Tyw+xMQl7VaYvxy0iD95czjr5xlVQBmYC9rA6Ek8AAdb+HGdZtoKJopsFc4qOQ7rfKxUXW/HL/h8xNttmg9s644+8WKDinbsb/ieeJ+pf3G9DNzGbu5xbnGHaNBoe+eI3crBSv0kkEEdJAdDp2EQI7snjJ9s7qCR/DbqunCsp86Z//c7NHBVlFuesP1UUet4G1hjq/v8A8KzYmvSoFeLE/dNgCBmIiAiIgVJy4dfA+7ifXDyssLRzuiXtndEva9szBb27eMs3lw6+B93E+uHlaYKqEqU3IJCOjEDiQrBiB46QJThtza3OMiYgreniGZgjLmFOuaApkB9Q5F+4dx4zGB3Xd1wzNjGTnhRSmMjtk+kUnqBBZxZbKVPAG/2Tppyg0A2d6dV2LgdIqLUxialUAEPqyo1NQvAlLE21PP8A744VfogWnUAw9Si73KapQSpTQIM3WKvc3IAIsL8YHH2rsalRpU6i4nOamconMul0R3ply5YgG6XykX18Jxp29obYpVcLh6INYPRz9Hoc0c9R3z9bNnysBwA4ziQ6REQP1ZERDhERAREQEREBERAREQEREBERAREQEREBERAqTlw6+B8sT64eVVW6reR9JavLh18D5Yn1w8q0iHVp7K2Zn2ltBjTupSlTW62W1YU1dlvobBG4TUwG0sSr4JGcXOExLOMlPV6fPhW6vEGmn/r4mQattnFvYPiKzZSrLmqObMhujC50IOoPZPI7QrZg3OvmAZQ2drhXzF1BvoDma47cx74cd/e7Eu1LAguSrYai7LzaoodkF2DgdMtc3Xst4yLzYrY6s6Ij1HZEsERnYqgAsAik2XTTSa8OkRED9WREQ4REQEREBERAREQEREBERAREQEREBERAREQKk5cOvgfLE+uHlXREOkREBERAREQP/9k=" alt="">
-                <div class="des">
-                    <span>Colorbar </span>
-                    <h5>Colorbar Kiss Proof Lip Stain - Infused With Glam
-                        (6.5ml)
-                        </h5>
-                    <div class="star">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                    </div>
-                    <h4>Rs.760</h4>
-                </div>
-                <a href="#"><i class="fa-sharp fa-solid fa-bag-shopping"></i></a>
-            </div>
-
-            
+        <div class="container" id="product-list-3">
+            <!-- Product cards will be dynamically added here -->
+        </div>
+        <div class="container" id="product-list-4">
+            <!-- Product cards will be dynamically added here -->
         </div>
        </section>
 
@@ -417,6 +114,7 @@
          </footer>
 
          
-
+         <script type="module" src="./src/script.js"></script>
+         <script src="./dist/bundle.js"></script>
     </body>
 </html>

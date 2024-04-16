@@ -105,6 +105,55 @@ body{
     bottom: 12px;
     left: 20px;
 }
+#signup-container,
+#login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 500px;
+    height: 200px;
+    margin: auto;
+    margin-top: 100px;
+}
+#signup-page,
+#login-page {
+    background-color: whitesmoke;
+    padding: 20px;
+    border-radius: 10px;
+}
+#signup-page form,
+#login-page form {
+    text-align: center;
+}
+#signup-page h4,
+#login-page h4 {
+    margin-bottom: 20px;
+}
+
+.input-group {
+    margin-bottom: 10px;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.input-group button {
+    background-color: #A74AC7;
+    color: whitesmoke;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.input-group button:hover {
+    background-color: #9444b1;
+}
 #mobile{
     display: none;
 }
@@ -756,60 +805,48 @@ footer .copyright{
     color: white;
     background-color: #4f1c61;
 }
-#cart table{
+/* Add !important to override existing styles if necessary */
+#cart table {
     width: 100%;
     border-collapse: collapse;
-    table-layout: fixed;
-    white-space: nowrap;
 }
-#cart table img{
+
+#cart table img {
     width: 70px;
 }
-#cart table td:nth-child(1){
-    width: 100px;
+
+#cart table th,
+#cart table td {
     text-align: center;
+    padding: 10px;
 }
-#cart table td:nth-child(2){
-    width: 150px;
-    text-align: center;
-}
-#cart table td:nth-child(3){
-    width: 350px;
-    text-align: center;
-}
-#cart table td:nth-child(4),
-#cart table td:nth-child(5),
-#cart table td:nth-child(6){
-    width: 150px;
-    text-align: center;
-}
-#cart table td:nth-child(5) input{
-    width: 70px;
-    padding: 10px 5px 10px 15px;
-}
-#cart table thead{
-    border: 1px solid #787676;
-    border-left: none;
-    border-right: none;
-    border-top: none;
-}
-#cart table thead td{
+
+#cart table th {
     font-weight: 600;
     text-transform: uppercase;
-    font-size: 13px;
-    padding: 18px 0px   ;
 }
-#cart table tbody tr td{
-    padding-top: 15px;  
+
+#cart table thead {
+    border-bottom: 1px solid #787676;
 }
-#cart table tbody tr td button{
+
+#cart table tbody tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+#cart table tbody tr:hover {
+    background-color: #ddd;
+}
+
+#cart table tbody tr td button {
     background-color: transparent;
     border: none;
     cursor: pointer;
 }
-
-#cart table tbody tr{
-    font-size: 13px;
+#cart table tbody tr td:nth-child(5) input {
+    width: 50px; /* Adjust the width as needed */
+    padding: 5px; /* Adjust the padding as needed */
+    font-size: 12px; /* Adjust the font size as needed */
 }
 #cart-add{
     display: flex;
